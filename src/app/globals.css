@@ -33,4 +33,13 @@ body {
   .group:hover .draw-border {
     stroke-dashoffset: 0;
   }
+
+  /* Force hide Next.js Dev Tools */
+  nextjs-portal,
+  #next-route-announcer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
 }
