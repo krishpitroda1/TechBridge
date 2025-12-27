@@ -21,13 +21,13 @@ export default function Contact() {
         setStatus('submitting');
 
         try {
-            const response = await fetch("/", {
+            const response = await fetch("https://formsubmit.co/ajax/tempkrishpitroda@gmail.com", {
                 method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams({
-                    "form-name": "contact",
-                    ...formData
-                }).toString(),
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(formData),
             });
 
             if (response.ok) {
@@ -74,12 +74,8 @@ export default function Contact() {
                     <div className="w-full md:w-3/5 p-10">
                         <form
                             className="space-y-6"
-                            name="contact"
-                            method="POST"
-                            data-netlify="true"
                             onSubmit={handleSubmit}
                         >
-                            <input type="hidden" name="form-name" value="contact" />
 
                             <div className="grid grid-cols-2 gap-6">
                                 <div>
