@@ -1,8 +1,45 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        message: ""
+    });
+    const [status, setStatus] = useState(null); // null, 'submitting', 'success', 'error'
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('submitting');
+
+        try {
+            const response = await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({
+                    "form-name": "contact",
+                    ...formData
+                }).toString(),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ firstName: "", lastName: "", email: "", company: "", message: "" });
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            setStatus('error');
+        }
+    };
     return (
         <section id="contact" className="py-20 bg-gray-50">
             <div className="container mx-auto px-6">
@@ -35,36 +72,95 @@ export default function Contact() {
                     </div>
 
                     <div className="w-full md:w-3/5 p-10">
-                        <form className="space-y-6">
+                        <form
+                            className="space-y-6"
+                            name="contact"
+                            method="POST"
+                            data-netlify="true"
+                            onSubmit={handleSubmit}
+                        >
+                            <input type="hidden" name="form-name" value="contact" />
+
                             <div className="grid grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">First Name</label>
-                                    <input type="text" className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors" placeholder="John" />
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        required
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+                                        className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors"
+                                        placeholder="John"
+                                    />
                                 </div>
                                 <div>
                                     <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Last Name</label>
-                                    <input type="text" className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors" placeholder="Doe" />
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        required
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+                                        className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors"
+                                        placeholder="Doe"
+                                    />
                                 </div>
                             </div>
 
                             <div>
                                 <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Email Address</label>
-                                <input type="email" className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors" placeholder="john@example.com" />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors"
+                                    placeholder="john@example.com"
+                                />
                             </div>
 
                             <div>
                                 <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Company</label>
-                                <input type="text" className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors" placeholder="Your Company Ltd" />
+                                <input
+                                    type="text"
+                                    name="company"
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                    className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors"
+                                    placeholder="Your Company Ltd"
+                                />
                             </div>
 
                             <div>
                                 <label className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">How can we help?</label>
-                                <textarea rows="3" className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors" placeholder="Tell us about your goals..."></textarea>
+                                <textarea
+                                    rows="3"
+                                    name="message"
+                                    required
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors"
+                                    placeholder="Tell us about your goals..."
+                                ></textarea>
                             </div>
 
-                            <button type="submit" className="px-8 py-3 bg-brand-dark text-white font-medium rounded-full hover:bg-black hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                                Send Message
-                            </button>
+                            <div className="flex items-center gap-4">
+                                <button
+                                    type="submit"
+                                    disabled={status === 'submitting'}
+                                    className="px-8 py-3 bg-brand-dark text-white font-medium rounded-full hover:bg-black hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                    {status === 'submitting' ? 'Sending...' : 'Send Message'}
+                                </button>
+                                {status === 'success' && (
+                                    <span className="text-green-600 text-sm font-medium animate-pulse">Message sent successfully!</span>
+                                )}
+                                {status === 'error' && (
+                                    <span className="text-red-600 text-sm font-medium">Something went wrong. Please try again.</span>
+                                )}
+                            </div>
                         </form>
                     </div>
 
