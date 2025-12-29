@@ -34,7 +34,7 @@ function AnimatedSphere() {
 
 export default function Hero() {
     return (
-        <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-brand-light">
+        <section className="relative w-full min-h-[100dvh] md:min-h-screen flex items-center justify-center overflow-hidden bg-brand-light py-24 md:py-32">
             {/* 3D Background */}
             <div className="absolute inset-0 z-0 opacity-20 md:opacity-40">
                 <Canvas>
@@ -45,19 +45,19 @@ export default function Hero() {
                 </Canvas>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-brand-red font-semibold text-lg md:text-xl uppercase tracking-widest mb-4">
+                    <h2 className="text-brand-red font-semibold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-widest mb-4">
                         TechBridge Advisory Partners
                     </h2>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-brand-dark leading-tight max-w-4xl mx-auto mb-6 text-balance">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-dark leading-tight max-w-4xl mx-auto mb-6 text-balance">
                         Connecting Tech Companies to Their <span className="text-brand-red">Next Big Opportunity</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 text-balance">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 text-balance">
                         Helping Telecom, CPaaS, SaaS, AI, and digital-platform founders raise capital, scale globally, and exit with confidence.
                     </p>
 
