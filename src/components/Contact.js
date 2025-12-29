@@ -21,7 +21,7 @@ export default function Contact() {
         setStatus('submitting');
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/tempkrishpitroda@gmail.com", {
+            const response = await fetch("https://formsubmit.co/ajax/info@techbridge.website", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

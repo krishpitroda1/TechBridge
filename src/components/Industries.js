@@ -4,7 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function IndustriesAndWhyUs() {
     const industries = [
-        "Telecom & Messaging (A2P, CPaaS)",
+        "Telecom & Messaging (A2P,VoIP,CPaaS)",
         "SaaS & Enterprise Software",
         "AI & Data Platforms",
         "Cloud & Digital Marketplaces",
