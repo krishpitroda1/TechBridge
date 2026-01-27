@@ -8,12 +8,15 @@ export default function Contact() {
         lastName: "",
         email: "",
         company: "",
-        message: ""
+        company: "",
+        message: "",
+        consent: false
     });
     const [status, setStatus] = useState(null); // null, 'submitting', 'success', 'error'
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+        setFormData({ ...formData, [e.target.name]: value });
     };
 
     const handleSubmit = async (e) => {
@@ -32,7 +35,7 @@ export default function Contact() {
 
             if (response.ok) {
                 setStatus('success');
-                setFormData({ firstName: "", lastName: "", email: "", company: "", message: "" });
+                setFormData({ firstName: "", lastName: "", email: "", company: "", message: "", consent: false });
             } else {
                 setStatus('error');
             }
@@ -140,6 +143,21 @@ export default function Contact() {
                                     className="w-full border-b border-gray-300 focus:border-brand-red focus:outline-none py-2 transition-colors"
                                     placeholder="Tell us about your goals..."
                                 ></textarea>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <input
+                                    type="checkbox"
+                                    name="consent"
+                                    id="consent"
+                                    required
+                                    checked={formData.consent}
+                                    onChange={handleChange}
+                                    className="mt-1 w-4 h-4 text-brand-red border-gray-300 rounded focus:ring-brand-red"
+                                />
+                                <label htmlFor="consent" className="text-xs text-gray-500 leading-tight">
+                                    By clicking this, you agree to disclose your personal information to SMSCloud Hub for contacting you via SMS, Email, RCS Messages, Calls and WhatsApp.
+                                </label>
                             </div>
 
                             <div className="flex items-center gap-4">

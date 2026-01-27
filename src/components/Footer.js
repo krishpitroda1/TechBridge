@@ -38,7 +38,7 @@ export default function Footer() {
                         <h4 className="font-bold text-lg mb-4">Contact</h4>
                         <ul className="space-y-2 text-sm text-gray-400">
                             <li>Mumbai, India</li>
-                            <li><a href="tel:+919833994266" className="hover:text-brand-red">+91 98339 94266</a></li>
+                            <li><a href="tel:+919833994266" className="hover:text-brand-red">+91 9429641563 </a></li>
                         </ul>
                     </div>
                 </div>
@@ -46,8 +46,8 @@ export default function Footer() {
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
                     <p>&copy; {new Date().getFullYear()} TechBridge Advisory Partners. All rights reserved.</p>
                     <div className="flex gap-4 mt-4 md:mt-0">
-                        <span>Privacy Policy</span>
-                        <span>Terms of Service</span>
+                        <Link href="/privacy-policy" className="hover:text-brand-red transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-conditions" className="hover:text-brand-red transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>
