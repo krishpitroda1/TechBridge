@@ -16,9 +16,8 @@ export default function Footer() {
                                 TechBridge
                             </span>
                         </div>
-                        <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                            A Boutique Tech M&A & Growth Execution Partner for Digital Businesses.
-                            Connecting tech companies to their next big opportunity.
+                        <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+                            A Technology Venture Studio and Digital Solutions Company. Building, incubating, and scaling market-defining platforms across SaaS, AI, MarTech, and MSME digital ecosystems.
                         </p>
                     </div>
 
@@ -26,10 +25,11 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold text-lg mb-4">Company</h4>
                         <ul className="space-y-2 text-sm text-gray-400">
-                            <li><Link href="#about" className="hover:text-brand-red transition-colors">About Us</Link></li>
-                            <li><Link href="#services" className="hover:text-brand-red transition-colors">Services</Link></li>
-                            <li><Link href="#industries" className="hover:text-brand-red transition-colors">Industries</Link></li>
-                            <li><Link href="#contact" className="hover:text-brand-red transition-colors">Contact</Link></li>
+                            <li><Link href="/#about" className="hover:text-brand-red transition-colors">About Us</Link></li>
+                            <li><Link href="/#products" className="hover:text-brand-red transition-colors">Products & Platforms</Link></li>
+                            <li><Link href="/#services" className="hover:text-brand-red transition-colors">Services</Link></li>
+                            <li><Link href="/#industries" className="hover:text-brand-red transition-colors">Industries</Link></li>
+                            <li><Link href="/#contact" className="hover:text-brand-red transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -37,8 +37,9 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold text-lg mb-4">Contact</h4>
                         <ul className="space-y-2 text-sm text-gray-400">
-                            <li>Mumbai, India</li>
-                            <li><a href="tel:+919833994266" className="hover:text-brand-red">+91 9429641563 </a></li>
+                            <li className="flex items-center gap-2 text-white font-medium">Rajkot, Gujarat, India</li>
+                            <li><a href="tel:+919429641563" className="hover:text-brand-red">+91 94296 41563</a></li>
+                            <li><a href="mailto:info@techbridge.website" className="hover:text-brand-red">info@techbridge.website</a></li>
                         </ul>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ export default function TermsAndConditions() {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-semibold text-brand-red">Welcome to TechBridge</h2>
                     <p className="text-gray-300 leading-relaxed">
-                        These terms and conditions outline the rules and regulations for the use of SMSCloud Hub's website and services By accessing this website and using our services, you agree to accept these terms and conditions. If you do not agree to all the terms and conditions stated on this page, please do not continue to use Techbridge
+                        These terms and conditions outline the rules and regulations for the use of TechBridge's website and services. By accessing this website and using our services, you agree to accept these terms and conditions. If you do not agree to all the terms and conditions stated on this page, please do not continue to use TechBridge.
                     </p>
                 </section>
 

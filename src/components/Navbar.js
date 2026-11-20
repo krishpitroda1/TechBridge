@@ -17,10 +17,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Industries", href: "#industries" },
-    { name: "Contact", href: "#contact" },
+    { name: "About Us", href: "/#about" },
+    { name: "Products & Platforms", href: "/#products" },
+    { name: "Services", href: "/#services" },
+    { name: "Industries", href: "/#industries" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -50,7 +51,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="px-6 py-2 bg-brand-red text-white rounded-full font-medium hover:bg-red-600 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             Let's Talk
@@ -87,7 +88,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/#contact"
                 onClick={() => setIsOpen(false)}
                 className="w-full text-center py-3 bg-brand-red text-white font-medium rounded-lg"
               >

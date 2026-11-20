@@ -50,27 +50,32 @@ export default function Contact() {
 
                     <div className="w-full md:w-2/5 bg-brand-red text-white p-10 flex flex-col justify-between">
                         <div>
-                            <h3 className="text-2xl font-bold mb-6">Let's Talk</h3>
-                            <p className="opacity-90 mb-8 leading-relaxed">
-                                Explore whether there is a strategic fit before we talk transactions.
+                            <span className="text-xs uppercase tracking-widest font-semibold opacity-80 block mb-2">Venture Studio & Solutions</span>
+                            <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+                            <p className="opacity-90 mb-8 leading-relaxed text-sm">
+                                Whether you're exploring our proprietary platforms, looking for a venture studio partner, or seeking digital growth execution, let's talk.
                             </p>
 
-                            <div className="space-y-6">
+                            <div className="space-y-4 text-sm">
                                 <div className="flex items-center gap-3">
-                                    <Phone className="w-5 h-5" />
-                                    <a href="tel:+919833994266" className="hover:underline">+91 98339 94266</a>
+                                    <Phone className="w-5 h-5 shrink-0" />
+                                    <a href="tel:+919429641563" className="hover:underline">+91 94296 41563</a>
                                 </div>
-                                {/* Assuming email wasn't provided directly, adding a placeholder or omitting */}
-                                {/* <div className="flex items-center gap-3">
-                            <Mail className="w-5 h-5" />
-                            <a href="mailto:contact@techbridge.com" className="hover:underline">contact@techbridge.com</a>
-                        </div> */}
+                                <div className="flex items-center gap-3">
+                                    <Mail className="w-5 h-5 shrink-0" />
+                                    <a href="mailto:info@techbridge.website" className="hover:underline">info@techbridge.website</a>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <MapPin className="w-5 h-5 shrink-0" />
+                                    <span>Rajkot, Gujarat, India</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="mt-12">
-                            <div className="text-sm opacity-75">TechBridge Advisory Partners</div>
-                            <div className="text-xs opacity-50 mt-1">© 2024 All rights reserved</div>
+                        <div className="mt-12 pt-6 border-t border-white/20">
+                            <div className="text-sm font-semibold">TechBridge</div>
+                            <div className="text-xs opacity-75">Technology Venture Studio & Digital Solutions</div>
+                            <div className="text-xs opacity-60 mt-1">© {new Date().getFullYear()} All rights reserved</div>
                         </div>
                     </div>
 
@@ -156,7 +161,7 @@ export default function Contact() {
                                     className="mt-1 w-4 h-4 text-brand-red border-gray-300 rounded focus:ring-brand-red"
                                 />
                                 <label htmlFor="consent" className="text-xs text-gray-500 leading-tight">
-                                    By clicking this, you agree to disclose your personal information to SMSCloud Hub for contacting you via SMS, Email, RCS Messages, Calls and WhatsApp.
+                                    By clicking this, you agree to disclose your personal information to TechBridge for contacting you via SMS, Email, RCS Messages, Calls and WhatsApp.
                                 </label>
                             </div>
 

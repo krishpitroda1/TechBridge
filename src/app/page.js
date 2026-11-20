@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import AboutUs from '@/components/AboutUs';
+import ProductsPortfolio from '@/components/ProductsPortfolio';
 import Services from '@/components/Services';
 import IndustriesAndWhyUs from '@/components/Industries';
 import Contact from '@/components/Contact';
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutUs />
+      <ProductsPortfolio />
       <Services />
       <IndustriesAndWhyUs />
       <Contact />

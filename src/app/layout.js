@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "TechBridge Advisory Partners",
-  description: "Boutique Tech M&A & Growth Execution Partner for Digital Businesses.",
+  title: "TechBridge | Technology Venture Studio & Digital Solutions Company",
+  description: "A Technology Venture Studio and Digital Solutions Company. Building, incubating, and scaling proprietary platforms across Healthcare, MarTech, AI, CRM, and MSME Software.",
   icons: {
     icon: '/icon.jpeg?v=2',
   },

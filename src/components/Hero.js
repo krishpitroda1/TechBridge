@@ -51,22 +51,22 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-brand-red font-semibold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-widest mb-4">
-                        TechBridge Advisory Partners
-                    </h2>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-dark leading-tight max-w-4xl mx-auto mb-6 text-balance">
-                        Connecting Tech Companies to Their <span className="text-brand-red">Next Big Opportunity</span>
+                    <span className="inline-block py-1 px-4 rounded-full bg-red-100 text-brand-red font-semibold text-xs sm:text-sm tracking-wider uppercase mb-5">
+                        A Technology Venture Studio & Digital Solutions Company
+                    </span>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-dark leading-tight max-w-5xl mx-auto mb-6 text-balance">
+                        Building High-Impact Products & Scaling <span className="text-brand-red">Digital Ventures</span>
                     </h1>
-                    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 text-balance">
-                        Helping Telecom, CPaaS, SaaS, AI, and digital-platform founders raise capital, scale globally, and exit with confidence.
+                    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10 text-balance leading-relaxed">
+                        Incubating innovative SaaS, AI, CPaaS, and consumer platforms, while partnering with ambitious businesses to engineer sustainable digital growth — backed by 30+ years of tech leadership.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#contact" className="px-8 py-4 bg-brand-red text-white font-medium rounded-full hover:bg-red-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                            Start Your Journey
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#products" className="px-8 py-4 bg-brand-red text-white font-medium rounded-full hover:bg-red-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Explore Products & Platforms
                         </a>
-                        <a href="#services" className="px-8 py-4 bg-white text-brand-dark font-medium rounded-full border border-gray-200 hover:border-brand-red hover:text-brand-red transition-all shadow-sm">
-                            Explore Services
+                        <a href="#about" className="px-8 py-4 bg-white text-brand-dark font-medium rounded-full border border-gray-200 hover:border-brand-red hover:text-brand-red transition-all shadow-sm">
+                            About Studio & Leadership
                         </a>
                     </div>
                 </motion.div>
