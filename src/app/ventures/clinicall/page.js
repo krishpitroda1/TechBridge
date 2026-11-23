@@ -19,27 +19,28 @@ export default function CliniCallPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-sky-950 via-sky-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:18px_18px]" />
+      {/* Hero — Light Theme */}
+      <section className="pt-32 pb-16 bg-gradient-to-br from-sky-50 via-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(#bae6fd_1px,transparent_1px)] [background-size:18px_18px]" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 via-sky-500 to-sky-400" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
           <Link
             href="/ventures"
-            className="inline-flex items-center gap-2 text-sky-300 hover:text-white text-sm font-medium transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-800 text-sm font-medium transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Ventures We Support
           </Link>
 
           <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
-            <div className="w-20 h-20 bg-sky-100 rounded-3xl flex items-center justify-center text-4xl shadow-xl ring-4 ring-sky-200/30 shrink-0">
+            <div className="w-20 h-20 bg-sky-100 rounded-3xl flex items-center justify-center text-4xl shadow-lg ring-4 ring-sky-200 shrink-0">
               🏥
             </div>
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-sky-300 bg-sky-500/10 border border-sky-400/20 px-3 py-1 rounded-full">
+              <span className="text-xs font-semibold uppercase tracking-wider text-sky-700 bg-sky-100 border border-sky-200 px-3 py-1 rounded-full">
                 Healthcare Technology
               </span>
-              <h1 className="text-4xl sm:text-5xl font-bold mt-3 leading-tight">CliniCAll</h1>
-              <p className="text-sky-200 text-lg mt-2 font-medium italic">
+              <h1 className="text-4xl sm:text-5xl font-bold mt-3 leading-tight text-brand-dark">CliniCAll</h1>
+              <p className="text-sky-600 text-lg mt-2 font-medium italic">
                 Simplifying Clinic Management. Empowering Medical Practices.
               </p>
             </div>
@@ -50,13 +51,13 @@ export default function CliniCallPage() {
               href="https://www.clinicall.online"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-sky-500 hover:bg-sky-400 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 text-sm"
             >
               Visit CliniCAll <ExternalLink className="w-4 h-4" />
             </a>
             <a
               href="/#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium rounded-full transition-all text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 border border-gray-200 text-brand-dark font-medium rounded-full transition-all text-sm shadow-sm"
             >
               Partner with Us
             </a>
@@ -122,28 +123,32 @@ export default function CliniCallPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-sky-950 text-white rounded-2xl p-6 shadow-xl">
-              <h3 className="font-bold text-lg mb-4 text-sky-200">Platform Details</h3>
+            {/* Platform Details — Light card */}
+            <div className="bg-white border border-sky-200 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 bg-sky-100 rounded-lg flex items-center justify-center text-lg">🏥</div>
+                <h3 className="font-bold text-brand-dark">Platform Details</h3>
+              </div>
               <div className="space-y-4 text-sm">
-                <div className="border-b border-sky-800 pb-3">
-                  <div className="text-sky-400 text-xs uppercase tracking-wider mb-1">Category</div>
-                  <div className="font-medium">Healthcare Technology</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-sky-600 text-xs uppercase tracking-wider font-semibold mb-1">Category</div>
+                  <div className="font-medium text-brand-dark">Healthcare Technology</div>
                 </div>
-                <div className="border-b border-sky-800 pb-3">
-                  <div className="text-sky-400 text-xs uppercase tracking-wider mb-1">Target Users</div>
-                  <div className="font-medium">Doctors, Receptionists, Clinic Administrators</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-sky-600 text-xs uppercase tracking-wider font-semibold mb-1">Target Users</div>
+                  <div className="font-medium text-brand-dark">Doctors, Receptionists, Clinic Administrators</div>
                 </div>
-                <div className="border-b border-sky-800 pb-3">
-                  <div className="text-sky-400 text-xs uppercase tracking-wider mb-1">Focus</div>
-                  <div className="font-medium">Clinic Management, EMR, Patient Care</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-sky-600 text-xs uppercase tracking-wider font-semibold mb-1">Focus</div>
+                  <div className="font-medium text-brand-dark">Clinic Management, EMR, Patient Care</div>
                 </div>
                 <div>
-                  <div className="text-sky-400 text-xs uppercase tracking-wider mb-1">Website</div>
+                  <div className="text-sky-600 text-xs uppercase tracking-wider font-semibold mb-1">Website</div>
                   <a
                     href="https://www.clinicall.online"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-300 hover:text-white font-medium flex items-center gap-1 transition-colors"
+                    className="text-sky-600 hover:text-sky-800 font-medium flex items-center gap-1 transition-colors"
                   >
                     clinicall.online <ExternalLink className="w-3 h-3" />
                   </a>
@@ -169,7 +174,7 @@ export default function CliniCallPage() {
               href="https://www.clinicall.online"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full py-3.5 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-xl text-center transition-colors text-sm flex items-center justify-center gap-2"
+              className="block w-full py-3.5 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-xl text-center transition-colors text-sm flex items-center justify-center gap-2 shadow-md"
             >
               Explore CliniCAll <ExternalLink className="w-4 h-4" />
             </a>

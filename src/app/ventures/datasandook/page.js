@@ -18,27 +18,28 @@ export default function DataSandookPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#60a5fa_1px,transparent_1px)] [background-size:18px_18px]" />
+      {/* Hero — Light Theme */}
+      <section className="pt-32 pb-16 bg-gradient-to-br from-blue-50 via-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(#bfdbfe_1px,transparent_1px)] [background-size:18px_18px]" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
           <Link
             href="/ventures"
-            className="inline-flex items-center gap-2 text-blue-300 hover:text-white text-sm font-medium transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Ventures We Support
           </Link>
 
           <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
-            <div className="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center text-4xl shadow-xl ring-4 ring-blue-200/30 shrink-0">
+            <div className="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center text-4xl shadow-lg ring-4 ring-blue-200 shrink-0">
               🗄️
             </div>
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-blue-300 bg-blue-500/10 border border-blue-400/20 px-3 py-1 rounded-full">
+              <span className="text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-100 border border-blue-200 px-3 py-1 rounded-full">
                 Data & Cloud Intelligence
               </span>
-              <h1 className="text-4xl sm:text-5xl font-bold mt-3 leading-tight">DataSandook</h1>
-              <p className="text-blue-200 text-lg mt-2 font-medium italic">
+              <h1 className="text-4xl sm:text-5xl font-bold mt-3 leading-tight text-brand-dark">DataSandook</h1>
+              <p className="text-blue-600 text-lg mt-2 font-medium italic">
                 Making Data More Meaningful. Unlocking New Possibilities.
               </p>
             </div>
@@ -49,13 +50,13 @@ export default function DataSandookPage() {
               href="https://www.datasandook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 text-sm"
             >
               Visit DataSandook <ExternalLink className="w-4 h-4" />
             </a>
             <a
               href="/#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium rounded-full transition-all text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 border border-gray-200 text-brand-dark font-medium rounded-full transition-all text-sm shadow-sm"
             >
               Partner with Us
             </a>
@@ -127,28 +128,32 @@ export default function DataSandookPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-blue-950 text-white rounded-2xl p-6 shadow-xl">
-              <h3 className="font-bold text-lg mb-4 text-blue-200">Platform Details</h3>
+            {/* Platform Details — Light card */}
+            <div className="bg-white border border-blue-200 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-lg">🗄️</div>
+                <h3 className="font-bold text-brand-dark">Platform Details</h3>
+              </div>
               <div className="space-y-4 text-sm">
-                <div className="border-b border-blue-800 pb-3">
-                  <div className="text-blue-400 text-xs uppercase tracking-wider mb-1">Category</div>
-                  <div className="font-medium">Data & Cloud Intelligence</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-blue-600 text-xs uppercase tracking-wider font-semibold mb-1">Category</div>
+                  <div className="font-medium text-brand-dark">Data & Cloud Intelligence</div>
                 </div>
-                <div className="border-b border-blue-800 pb-3">
-                  <div className="text-blue-400 text-xs uppercase tracking-wider mb-1">Focus Area</div>
-                  <div className="font-medium">Data Repositories, Digital Intelligence, Cloud</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-blue-600 text-xs uppercase tracking-wider font-semibold mb-1">Focus Area</div>
+                  <div className="font-medium text-brand-dark">Data Repositories, Digital Intelligence, Cloud</div>
                 </div>
-                <div className="border-b border-blue-800 pb-3">
-                  <div className="text-blue-400 text-xs uppercase tracking-wider mb-1">Stage</div>
-                  <div className="font-medium">Platform in Development</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-blue-600 text-xs uppercase tracking-wider font-semibold mb-1">Stage</div>
+                  <div className="font-medium text-brand-dark">Platform in Development</div>
                 </div>
                 <div>
-                  <div className="text-blue-400 text-xs uppercase tracking-wider mb-1">Website</div>
+                  <div className="text-blue-600 text-xs uppercase tracking-wider font-semibold mb-1">Website</div>
                   <a
                     href="https://www.datasandook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-300 hover:text-white font-medium flex items-center gap-1 transition-colors"
+                    className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1 transition-colors"
                   >
                     datasandook.com <ExternalLink className="w-3 h-3" />
                   </a>
@@ -174,7 +179,7 @@ export default function DataSandookPage() {
               href="https://www.datasandook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-center transition-colors text-sm flex items-center justify-center gap-2"
+              className="block w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-center transition-colors text-sm flex items-center justify-center gap-2 shadow-md"
             >
               Explore DataSandook <ExternalLink className="w-4 h-4" />
             </a>

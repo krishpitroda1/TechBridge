@@ -18,27 +18,28 @@ export default function ChitraBharatPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-orange-950 via-orange-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fb923c_1px,transparent_1px)] [background-size:18px_18px]" />
+      {/* Hero — Light Theme */}
+      <section className="pt-32 pb-16 bg-gradient-to-br from-orange-50 via-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(#fed7aa_1px,transparent_1px)] [background-size:18px_18px]" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
           <Link
             href="/ventures"
-            className="inline-flex items-center gap-2 text-orange-300 hover:text-white text-sm font-medium transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-800 text-sm font-medium transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Ventures We Support
           </Link>
 
           <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
-            <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center text-4xl shadow-xl ring-4 ring-orange-200/30 shrink-0">
+            <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center text-4xl shadow-lg ring-4 ring-orange-200 shrink-0">
               🎨
             </div>
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-orange-300 bg-orange-500/10 border border-orange-400/20 px-3 py-1 rounded-full">
+              <span className="text-xs font-semibold uppercase tracking-wider text-orange-700 bg-orange-100 border border-orange-200 px-3 py-1 rounded-full">
                 Creative Media Platform
               </span>
-              <h1 className="text-4xl sm:text-5xl font-bold mt-3 leading-tight">ChitraBharat</h1>
-              <p className="text-orange-200 text-lg mt-2 font-medium italic">
+              <h1 className="text-4xl sm:text-5xl font-bold mt-3 leading-tight text-brand-dark">ChitraBharat</h1>
+              <p className="text-orange-600 text-lg mt-2 font-medium italic">
                 Celebrating India's Creative Identity. Sharing Bharat with the World.
               </p>
             </div>
@@ -49,13 +50,13 @@ export default function ChitraBharatPage() {
               href="https://www.chitrabharat.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-400 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 text-sm"
             >
               Visit ChitraBharat <ExternalLink className="w-4 h-4" />
             </a>
             <a
               href="/#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium rounded-full transition-all text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 border border-gray-200 text-brand-dark font-medium rounded-full transition-all text-sm shadow-sm"
             >
               Partner with Us
             </a>
@@ -136,28 +137,32 @@ export default function ChitraBharatPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-orange-950 text-white rounded-2xl p-6 shadow-xl">
-              <h3 className="font-bold text-lg mb-4 text-orange-200">Platform Details</h3>
+            {/* Platform Details — Light card */}
+            <div className="bg-white border border-orange-200 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center text-lg">🎨</div>
+                <h3 className="font-bold text-brand-dark">Platform Details</h3>
+              </div>
               <div className="space-y-4 text-sm">
-                <div className="border-b border-orange-800 pb-3">
-                  <div className="text-orange-400 text-xs uppercase tracking-wider mb-1">Category</div>
-                  <div className="font-medium">Creative Media Platform</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-orange-600 text-xs uppercase tracking-wider font-semibold mb-1">Category</div>
+                  <div className="font-medium text-brand-dark">Creative Media Platform</div>
                 </div>
-                <div className="border-b border-orange-800 pb-3">
-                  <div className="text-orange-400 text-xs uppercase tracking-wider mb-1">Target Audience</div>
-                  <div className="font-medium">Creators, Photographers, Videographers, Artists, Businesses</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-orange-600 text-xs uppercase tracking-wider font-semibold mb-1">Target Audience</div>
+                  <div className="font-medium text-brand-dark">Creators, Photographers, Videographers, Artists, Businesses</div>
                 </div>
-                <div className="border-b border-orange-800 pb-3">
-                  <div className="text-orange-400 text-xs uppercase tracking-wider mb-1">Content Types</div>
-                  <div className="font-medium">Photography, Video, Audio, AI-Generated Assets</div>
+                <div className="border-b border-gray-100 pb-3">
+                  <div className="text-orange-600 text-xs uppercase tracking-wider font-semibold mb-1">Content Types</div>
+                  <div className="font-medium text-brand-dark">Photography, Video, Audio, AI-Generated Assets</div>
                 </div>
                 <div>
-                  <div className="text-orange-400 text-xs uppercase tracking-wider mb-1">Website</div>
+                  <div className="text-orange-600 text-xs uppercase tracking-wider font-semibold mb-1">Website</div>
                   <a
                     href="https://www.chitrabharat.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-orange-300 hover:text-white font-medium flex items-center gap-1 transition-colors"
+                    className="text-orange-600 hover:text-orange-800 font-medium flex items-center gap-1 transition-colors"
                   >
                     chitrabharat.com <ExternalLink className="w-3 h-3" />
                   </a>
@@ -183,7 +188,7 @@ export default function ChitraBharatPage() {
               href="https://www.chitrabharat.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full py-3.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl text-center transition-colors text-sm flex items-center justify-center gap-2"
+              className="block w-full py-3.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl text-center transition-colors text-sm flex items-center justify-center gap-2 shadow-md"
             >
               Explore ChitraBharat <ExternalLink className="w-4 h-4" />
             </a>

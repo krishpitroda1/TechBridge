@@ -93,30 +93,34 @@ export default function VenturesPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-brand-dark via-slate-900 to-slate-800 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FF4D4D_1px,transparent_1px)] [background-size:20px_20px]" />
+      {/* Hero Banner — Light Theme */}
+      <section className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        {/* Subtle dot pattern */}
+        <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px]" />
+        {/* Red accent bar at top */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-red via-red-400 to-brand-red" />
+
         <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red font-semibold text-xs uppercase tracking-wider mb-6">
             <Sparkles className="w-3.5 h-3.5" />
             TechBridge Advisory Partners
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight text-brand-dark">
             Ventures We{" "}
             <span className="text-brand-red">Support</span>
           </h1>
 
-          <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
+          <p className="text-gray-500 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
             Supporting Ideas. Building Businesses. Creating Impact.
           </p>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto text-left">
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto text-left shadow-sm">
+            <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
               At TechBridge Advisory Partners, we believe that meaningful businesses are built by identifying
               opportunities, embracing innovation and turning ideas into scalable solutions.
             </p>
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base mt-4">
+            <p className="text-gray-600 leading-relaxed text-sm sm:text-base mt-4">
               Beyond our advisory and strategic growth activities, we actively support the development of promising
               digital businesses, technology platforms and entrepreneurial initiatives across emerging industries.
             </p>
@@ -131,7 +135,7 @@ export default function VenturesPage() {
             ].map((p, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-medium text-white"
+                className="flex items-center justify-center gap-2 bg-white border border-gray-200 rounded-xl px-4 py-3 font-medium text-brand-dark shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
               >
                 <span className="text-brand-red">{p.icon}</span>
                 {p.label}
